@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
         //industrial sectors
         final CheckBox industrial_1 = (CheckBox) findViewById(R.id.ind1);
 
+        final TextView mylabel = (TextView) findViewById(R.id.textView);
+
         //Acquire Bluetooth Adapter
         BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -107,13 +109,13 @@ public class MainActivity extends AppCompatActivity {
             public workerThread(String msg) {
                 blueTMessage = msg;
             }
-            private final InputStream mmInputStream = new InputStream() {
+            /*private final InputStream mmInputStream = new InputStream() {
                 @Override
                 public int read() throws IOException {
                     throw new IOException();
                 }
             };
-            @Override
+            @Override*/
             public void run() {
                 sendBtMsg(blueTMessage);
                 while(!Thread.currentThread().isInterrupted()){
@@ -137,14 +139,14 @@ public class MainActivity extends AppCompatActivity {
                                     System.arraycopy(readBuffer,0,encodedBytes,0,encodedBytes.length);
                                     final String data = new String(encodedBytes, "US-ASCII");
                                     readBufferPosition = 0;
-/*
-*                                    handler.post(new Runnable(){
- *                                       public void run(){
-  *                                          //mylabel.setText(data);
-   *                                         //this section of code is where we will produce the data values.
-*
- *                                       }
-  *                                  });*/
+
+                                    handler.post(new Runnable(){
+                                        public void run(){
+                                            mylabel.setText(data);
+                                            //this section of code is where we will produce the data values.
+
+                                        }
+                                    });
                                     workDone = true;
                                     break;
                                 }
@@ -189,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res2_tog"))).start();
 
             }
         });
@@ -201,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res3_tog"))).start();
 
             }
         });
@@ -213,6 +217,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res4_tog"))).start();
 
             }
         });
@@ -225,6 +230,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res5_tog"))).start();
 
             }
         });
@@ -237,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res6_tog"))).start();
             }
         });
         residential_7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -248,6 +255,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res7_tog"))).start();
             }
         });
         residential_8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -259,6 +267,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res8_tog"))).start();
             }
         });
         residential_9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -270,6 +279,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res9_tog"))).start();
             }
         });
         residential_10.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -281,6 +291,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res10_tog"))).start();
             }
         });
         residential_11.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -292,6 +303,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("res11_tog"))).start();
             }
         });
         commercial_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -303,6 +315,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("com1_tog"))).start();
             }
         });
         commercial_2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -314,6 +327,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("com2_tog"))).start();
             }
         });
         commercial_3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -325,6 +339,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("com3_tog"))).start();
             }
         });
         commercial_4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -336,6 +351,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("com4_tog"))).start();
             }
         });
         commercial_5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -347,6 +363,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("com5_tog"))).start();
             }
         });
         commercial_6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -358,6 +375,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("com6_tog"))).start();
             }
         });
         industrial_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -369,6 +387,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     sectorStatus(false);
                 }
+                (new Thread(new workerThread("ind1_tog"))).start();
             }
         });
 
