@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.peter.smartgridv1.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:text="Control"
+        android:textSize="24dp"/>
+
+    <CheckBox
+        android:text="Residential 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/res1"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:duplicateParentState="false" />
+
+    <CheckBox
+        android:text="Residential 2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/res1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/res2" />
+
+    <CheckBox
+        android:text="Residential 3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/res2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/res3" />
+
+    <CheckBox
+        android:text="Residential 4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/res3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/res4" />
+
+    <CheckBox
+        android:text="Residential 5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/res4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/res5" />
+
+    <CheckBox
+        android:text="Residential 6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/res5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/res6" />
+
+    <CheckBox
+        android:text="Residential 7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/res6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/res7" />
+
+    <CheckBox
+        android:text="Residential 8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/res7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/res8" />
+
+    <CheckBox
+        android:text="Residential 9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/res9"
+        android:layout_below="@+id/res8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Residential 10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/res9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/res10" />
+
+    <CheckBox
+        android:text="Residential 11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/res10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/res11" />
+
+    <CheckBox
+        android:text="Commercial 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/com1"
+        android:layout_alignBaseline="@+id/res1"
+        android:layout_alignBottom="@+id/res1"
+        android:layout_toRightOf="@+id/res10"
+        android:layout_toEndOf="@+id/res10" />
+
+    <CheckBox
+        android:text="Commercial 2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/com2"
+        android:layout_below="@+id/com1"
+        android:layout_alignLeft="@+id/com1"
+        android:layout_alignStart="@+id/com1" />
+
+    <CheckBox
+        android:text="Commercial 3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/res4"
+        android:layout_alignLeft="@+id/com2"
+        android:layout_alignStart="@+id/com2"
+        android:id="@+id/com3" />
+
+    <CheckBox
+        android:text="Commercial 4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/com3"
+        android:layout_alignLeft="@+id/com3"
+        android:layout_alignStart="@+id/com3"
+        android:id="@+id/com4" />
+
+    <CheckBox
+        android:text="Commercial 5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/com4"
+        android:layout_alignLeft="@+id/com4"
+        android:layout_alignStart="@+id/com4"
+        android:id="@+id/com5" />
+
+    <CheckBox
+        android:text="Commercial 6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/res7"
+        android:layout_alignLeft="@+id/com5"
+        android:layout_alignStart="@+id/com5"
+        android:id="@+id/com6" />
+
+    <CheckBox
+        android:text="Industrial 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/com6"
+        android:layout_alignLeft="@+id/com6"
+        android:layout_alignStart="@+id/com6"
+        android:id="@+id/ind1" />
+</RelativeLayout>

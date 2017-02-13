@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SmartGridV1</string>
+    <string name="sectorOn">Sector is on.</string>
+    <string name="sectorOff">Sector is off.</string>
+</resources>
